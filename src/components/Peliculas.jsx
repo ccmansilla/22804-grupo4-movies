@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Logout from "./Logout";
 
 function Peliculas() {
   const [peliculas, setPeliculas] = useState([]);
@@ -80,9 +81,12 @@ function Peliculas() {
         <button id="btnSiguiente" onClick={siguiente}>
           Siguiente
         </button>
+        <Logout/>
       </div>
     </div>
   );
 }
+
+
 
 export default Peliculas;
