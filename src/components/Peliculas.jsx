@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Comentarios from "./Comentarios";
 
 function Peliculas() {
   const [peliculas, setPeliculas] = useState([]);
@@ -72,6 +73,8 @@ function Peliculas() {
           </div>
         ))}
       </div>
+
+      <Comentarios />
 
       <div className="paginacion">
         <button id="btnAnterior" onClick={anterior}>
