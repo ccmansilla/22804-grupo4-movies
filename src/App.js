@@ -1,6 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   let api_key = '65ac98c7e8553bc17656ed4fe49ec9d3';
@@ -48,11 +50,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className='encabezado'>
-        <h1> <img src="tmdb.svg" width="80px" alt="TMDB"/> Peliculas</h1>
+      <Header/>
+   {/*   <div className='encabezado'>
+      <h1> <img src="tmdb.svg" width="80px" alt="TMDB"/> Peliculas</h1>
        
-      </div>
-
+      </div>*/} 
       <div className="contenedor" id="contenedor">
 
         {peliculas.map((pelicula) =>
@@ -65,10 +67,12 @@ function App() {
 
       </div>
 
-      <div className="paginacion">
+       <div className="paginacion">
         <button id="btnAnterior" onClick={anterior} >Anterior</button>
         <button id="btnSiguiente" onClick={siguiente} >Siguiente</button>
       </div>
+       
+        <Footer/>
     </div>
   );
 }
