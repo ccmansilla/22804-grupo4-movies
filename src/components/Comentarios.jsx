@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs, query, where, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../firebaseConfig/firebase';
 import Swal from 'sweetalert2';
 import { async } from '@firebase/util';
@@ -17,13 +17,27 @@ function Comentarios({ usuario='Anonimo', pelicula='' }) {
 
     //referenciar la db de firebase
     const comentariosCollection = collection(db, 'comentarios');
+    const q = query(comentariosCollection, where("Pelicula", "==", pelicula));
 
     //creamos la funcionabilidad para mostrar los comentarios con asincronismo
     const getComentarios = async () => {
-        const data = await getDocs(comentariosCollection);
+        const data = await getDocs(q);
         setComentarios(
             data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
         );
+    }
+
+    //alerta nuevo comentario agregado
+    const alertaCreacion = ()=>{
+        Swal.fire({
+        title: 'Comentario nuevo creado',
+        showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+        }
+        });
     }
 
     //agregar comentario
@@ -32,7 +46,7 @@ function Comentarios({ usuario='Anonimo', pelicula='' }) {
         e.preventDefault();
         await addDoc(comentariosCollection, {Pelicula: pelicula, Usuario: usuario, Fecha: fecha.toString(), Comentario: comentario});
         setComentario('');
-        //alertaCreacion();
+        alertaCreacion();
         getComentarios();
     }
 
