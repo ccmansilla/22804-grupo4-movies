@@ -38,7 +38,7 @@ function Poster() {
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster,{ allowTaint: true, useCORS: true}).then(function (canvas) {
+    html2canvas(poster, { allowTaint: true, useCORS: true }).then(function (canvas) {
       let img = canvas.toDataURL("poster/jpg");
       let link = document.createElement("a");
       link.download = "poster.jpg";
@@ -49,28 +49,20 @@ function Poster() {
   }
 
   return (
-    <div className="container">
-      <div className="poster bg-dark row" id='poster'>
-          {peliculas.map((pelicula) => (
-            <div className="card bg-transparent border-0 col-2">
-              <img
-                className="border m-2"
-                src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
-                title={pelicula.overview}
-                alt={pelicula.title}
-              />
-            </div>
-          ))}
-          <div className="card bg-transparent border-0 col-2">
+    <div className="container-fluid">
+      <div className="tile bg-dark row" id='poster'>
+        {peliculas.map((pelicula) => (
+          <div className="card bg-transparent border-0 size">
+            <img
+              className="border m-2"
+              src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
+              alt={pelicula.title}
+            />
           </div>
-          <div className="card bg-transparent border-0 col-4">
-            <div class="card-body mt-5 pt-5">
-              <h1 class="card-title">REACTFLIX</h1>
-              <h2 class="card-subtitle mb-2 text-muted">POPULAR MOVIES</h2>
-            </div>
-          </div>
-          <div className="card bg-transparent border-0 col-2">
-          </div>
+        ))}
+        <div className='texto'>
+          <h1 className="text-center">REACTFLIX</h1>
+        </div>
       </div>
       <div className="">
         <button onClick={Descargar} type="button" className='btn btn-primary mt-4 mb-4'>Descargar</button>

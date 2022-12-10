@@ -3,6 +3,22 @@
     padding: 0;
 }
 
-.posterTile {
-    background-color: black;
+.tile {
+    margin: 20px;
+    width: 1200px;
+    height: 675px;
+}
+
+.size {
+    width: 150px;
+    height: 200px;
+}
+
+.texto {
+    background-color: rgb(49, 49, 79, 0.3);
+    width: 580px;
+    height: 150px;
+    position: absolute;
+    top: 480px;
+    left: 630px;
 }
