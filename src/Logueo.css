@@ -1,0 +1,32 @@
+.logueo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.logueo form div {
+display: flex;
+   margin: 10px;
+   align-items: center;
+   align-content: space-between;
+   width: 300px;
+}
+
+.logueo form {
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logueo button {
+   margin: 10px;
+}
+
+.logueo form div input {
+    display: flex;
+    flex-grow: 2;
+    margin-left: 5px;
+}
