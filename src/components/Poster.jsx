@@ -20,10 +20,10 @@ function Poster() {
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true }).then(function (canvas) {
-      let img = canvas.toDataURL("poster/jpg");
+    html2canvas(poster, { allowTaint: true, useCORS: true, logging : true }).then(function (canvas) {
+      let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
-      link.download = "poster.jpg";
+      link.download = "poster.png";
       link.href = img;
       link.click();
     });
