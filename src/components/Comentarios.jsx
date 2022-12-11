@@ -105,7 +105,7 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
 
     //mostrar datos en estructura    
     return (
-        <div className="cometarios m-5">
+        <div className="cometarios m-3">
             <h3 className="title2 p-2">Deja tu Comentario</h3>
             <div className="card bgComment text-white p-2 m-2">
                 <form onSubmit={agregarComentario} className=''>
