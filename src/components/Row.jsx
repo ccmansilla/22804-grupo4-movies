@@ -3,7 +3,7 @@ import axios from '../axios';
 import '../css/Row.css'
 
 // url para imagenes
-const base_url = "https://image.tmdb.org/t/p/original/";
+const base_url = "https://image.tmdb.org/t/p/w500/";
 
 const Row = ({title, fetchURL}) => {
 
