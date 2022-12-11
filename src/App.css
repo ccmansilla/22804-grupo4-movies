@@ -1,16 +1,17 @@
 * {
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	 padding: 0;
+	box-sizing: border-box; 
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background: #070707 !important;
+	background-color: #080F28  !important;;
+	/* background: #070707 !important; */
 	color: #F5F5F5 !important;
 }
 
-.encabezado {
+/* .encabezado {
 	padding: 20px;
 	background-color: #241744;
 	color: #F5F5F5;
@@ -74,4 +75,4 @@ body {
 
 .paginacion button:hover {
 	background: #137c32;
-}
+} */

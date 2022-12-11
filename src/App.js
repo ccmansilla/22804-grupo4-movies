@@ -8,9 +8,9 @@ import Poster from './components/Poster';
 function App() {
   return (
     <Routes>
-      <Route path= '/login' element={<Login/>} />
-      <Route path= '/poster' element={<Poster/>} />
-      <Route path= '/' element={<Peliculas />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/poster' element={<Poster />} />
+      <Route path='/' element={<Peliculas />} />
     </Routes>
   );
 }

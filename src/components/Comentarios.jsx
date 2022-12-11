@@ -5,7 +5,7 @@ import { db } from '../firebaseConfig/firebase';
 import Swal from 'sweetalert2';
 import { async } from '@firebase/util';
 import withReactContent from 'sweetalert2-react-content';
-import './Comentarios.css';
+import '../css/Comentarios.css';
 
 const MySwal = withReactContent(Swal);
 
