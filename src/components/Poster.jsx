@@ -32,11 +32,11 @@ function Poster() {
 
   return (
     <div className="container-fluid">
-      <div className="tile bg-dark row" id='poster'>
+      <div className="tile row" id='poster'>
         {movies.map((movie) => (
           <div className="card bg-transparent border-0 size">
             <img
-              className="border m-2"
+              className="border border-5 m-2"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
             />

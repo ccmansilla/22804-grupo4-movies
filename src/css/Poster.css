@@ -3,7 +3,10 @@
     padding: 0;
 }
 
-.tile {
+.tile {    
+    background: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 20px;
     width: 1200px;
     height: 675px;
@@ -15,10 +18,18 @@
 }
 
 .texto {
-    background-color: rgb(49, 49, 79, 0.3);
+    background-color: rgba(199, 199, 214, 0.3);
     width: 580px;
     height: 150px;
     position: absolute;
     top: 480px;
     left: 630px;
+}
+
+.texto h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: gold;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+             1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
