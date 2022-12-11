@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Comentarios from "./Comentarios";
 
 function Peliculas() {
@@ -52,9 +53,9 @@ function Peliculas() {
     <div className="App">
       <div className="encabezado">
         <h1>
-          {" "}
           <img src="tmdb.svg" width="80px" alt="TMDB" /> Peliculas
         </h1>
+        <Link to="/poster" relative="path">Poster</Link>
       </div>
 
       <div className="contenedor" id="contenedor">
