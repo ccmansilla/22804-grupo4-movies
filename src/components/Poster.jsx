@@ -15,12 +15,12 @@ function Poster() {
       setMovies(request.data.results);
       return request;
     }
-    fetchData();    
+    fetchData();
   }, [fetchURL]);
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true, logging : true }).then(function (canvas) {
+    html2canvas(poster, { allowTaint: true, useCORS: true}).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
       link.download = "poster.png";
@@ -34,8 +34,9 @@ function Poster() {
     <div className="container-fluid">
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
-          <div className="card bg-transparent border-0 size">
+          <div key={movie.poster_path} className="card bg-transparent border-0 size">
             <img
+              key={movie.poster_path}
               className="border border-5 m-2"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
