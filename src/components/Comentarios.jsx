@@ -71,6 +71,12 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, Borrar!',
             cancelButtonText: 'Cancelar',
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 deleteComentario(id);
