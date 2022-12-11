@@ -59,7 +59,7 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
         getComentarios();
     }
 
-    //configuración sweetalert
+    //alerta borrar comentario
     const confirmDelete = (id) => {
         Swal.fire({
             title: 'Seguro de Borrar el Comentario?',
@@ -113,7 +113,7 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
                         <label for="comentario" className="form-label">Comentario</label>
                         <textarea className="form-control bg-dark text-white" id="comentario" name="comentario" rows="3" value={comentario} onChange={(e) => setComentario(e.target.value)} required></textarea>
                     </div>
-                    <button type="submit" className="banner__button">Agregar</button>
+                    <button type="submit" className="banner__button"><i class="fa-sharp fa-solid fa-plus"></i> Agregar</button>
                 </form>
             </div>
 

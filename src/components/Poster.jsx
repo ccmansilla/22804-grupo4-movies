@@ -43,12 +43,12 @@ function Poster() {
             />
           </div>
         ))}
-        <div className='texto'>
-          <h1 className="text-center">REACTFLIX</h1>
+        <div className='texto p-5'>
+          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> REACTFLIX</h1>
         </div>
       </div>
       <div className="">
-        <button onClick={Descargar} type="button" className='btn btn-primary mt-4 mb-4'>Descargar</button>
+        <button onClick={Descargar} type="button" className='banner__button mb-5'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
     </div>
   );
