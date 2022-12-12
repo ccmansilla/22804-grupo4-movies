@@ -7,11 +7,10 @@
 }
 
 .logueo form div {
-display: flex;
-   margin: 10px;
-   align-items: center;
-   align-content: space-between;
-   width: 300px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    width: 300px;
 }
 
 .logueo form {
@@ -23,12 +22,6 @@ display: flex;
 
 .logueo button {
    margin: 10px;
-}
-
-.logueo form div input {
-    display: flex;
-    flex-grow: 2;
-    margin-left: 5px;
 }
 
 .btn-link {

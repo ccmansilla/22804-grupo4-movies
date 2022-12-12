@@ -19,7 +19,8 @@ function Logueo(props) {
             })
             .catch((error) => {
                 if (error.code === "auth/email-already-in-use") {
-                    Swal.fire("Este correo ya está en uso.");
+                    Swal.fire({title:"Este correo ya se encuentra registrado.", color: '#fff',
+            background: 'rgba(51, 51, 51)', confirmButtonColor: '#3085d6',});
                 }
             }
             );
@@ -33,7 +34,8 @@ function Logueo(props) {
         })
             .catch((error) => {
                 if (error.code === "auth/wrong-password") {
-                    Swal.fire("La contraseña ingresada es incorrecta.");
+                    Swal.fire({title:"La contraseña ingresada es incorrecta.", color: '#fff',
+            background: 'rgba(51, 51, 51)', confirmButtonColor: '#3085d6',});
                 }
             }
             );
@@ -49,10 +51,12 @@ function Logueo(props) {
         if (isRegistrando) {
             crearUsuario(correo, password);
             if (correo === "" || password==="") {
-                Swal.fire("Debes ingresar un correo y una contraseña.");
+                Swal.fire({title:"Debes ingresar un correo y una contraseña.", color: '#fff',
+            background: 'rgba(51, 51, 51)', confirmButtonColor: '#3085d6',});
             }
             if (correo && ((password.length > 1) && (password.length < 6))) {
-                Swal.fire("La contraseña debe poseer al menos 6 caracteres.");
+                Swal.fire({title:"La contraseña debe poseer al menos 6 caracteres.", color: '#fff',
+            background: 'rgba(51, 51, 51)', confirmButtonColor: '#3085d6',});
             }
         }
 
@@ -60,7 +64,8 @@ function Logueo(props) {
             iniciarSesion(correo, password);
 
         if (correo === "" || password==="") {
-            Swal.fire("Debes ingresar un correo y contraseña.");
+            Swal.fire({title:"Debes ingresar un correo y contraseña.", color: '#fff',
+            background: 'rgba(51, 51, 51)', confirmButtonColor: '#3085d6',});
         } }
     
     };
@@ -79,7 +84,7 @@ function Logueo(props) {
                 </div>
                 <button className="btn btn-info" type="submit">
                     {""}
-                    {isRegistrando ? "Registrate" : "Inicia sesión"} {""}
+                    {isRegistrando ? "Registrate e ingresa" : "Inicia sesión"} {""}
                 </button>
             </form>
 
