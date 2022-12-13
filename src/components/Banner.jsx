@@ -13,7 +13,7 @@ const Banner = () => {
 
 			setMovie(
 				request.data.results[
-					Math.floor(Math.random() * request.data.results.length - 1)
+					Math.floor(Math.random() * (request.data.results.length - 1))
 				]
 			);
 			return request;
@@ -40,7 +40,7 @@ const Banner = () => {
 				<div className="banner__buttons">
 					<button className="banner__button">Play</button>
 					<button className="banner__button">My List</button>
-		  			<Link to='/poster' className="banner__button">Poster</Link>
+		  			<Link to='/poster' className="banner__button">WallPaper</Link>
 				</div>
 				<h1 className="banner__description">{movie?.overview}</h1>
                

@@ -8,6 +8,6 @@
     font-weight: 700;
 }
 
-.bgCardHeader {
+.bgCardHeader, .bgComment {
     background: #2d3760;
 }

@@ -17,7 +17,7 @@
   
   .poster,
   .backdrop__poster {
-    width: 100%;
+    /*width: 100%; comento porque se ve chico en firefox*/
     object-fit: contain;
     transition: transform 450ms;
     margin-right: 1.5rem;

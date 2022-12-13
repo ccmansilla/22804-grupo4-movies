@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from '../axios';
 import requests from "../requests";
 import html2canvas from 'html2canvas';
+import { Link } from "react-router-dom";
 import '../css/Poster.css';
 
 function Poster() {
@@ -20,7 +21,7 @@ function Poster() {
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true}).then((canvas) => {
+    html2canvas(poster, { allowTaint: true, useCORS: true }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
       link.download = "poster.png";
@@ -34,21 +35,20 @@ function Poster() {
     <div className="container-fluid">
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
-          <div key={movie.poster_path} className="card bg-transparent border-0 size">
             <img
               key={movie.poster_path}
-              className="border border-5 m-2"
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              className="picture" 
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
-          </div>
         ))}
-        <div className='texto'>
-          <h1 className="text-center">REACTFLIX</h1>
+        <div className='texto p-5'>
+          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
-      <div className="">
-        <button onClick={Descargar} type="button" className='btn btn-primary mt-4 mb-4'>Descargar</button>
+      <div className="mb-5">
+        <Link className='poster__button' to="/"><i class="fa-solid fa-house"></i> Volver</Link>
+        <button onClick={Descargar} type="button" className='poster__button ms-1'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
     </div>
   );
