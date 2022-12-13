@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from '../axios';
 import requests from "../requests";
 import html2canvas from 'html2canvas';
+import { Link } from "react-router-dom";
 import '../css/Poster.css';
 
 function Poster() {
@@ -45,8 +46,9 @@ function Poster() {
           <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
-      <div className="">
-        <button onClick={Descargar} type="button" className='banner__button mb-5'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
+      <div className="mb-5">
+        <Link className='poster__button' to="/"><i class="fa-solid fa-house"></i> Volver</Link>
+        <button onClick={Descargar} type="button" className='poster__button ms-1'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
     </div>
   );
