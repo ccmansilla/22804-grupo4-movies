@@ -20,7 +20,7 @@ function Poster() {
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true}).then((canvas) => {
+    html2canvas(poster, { allowTaint: true, useCORS: true }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
       link.download = "poster.png";
@@ -34,17 +34,15 @@ function Poster() {
     <div className="container-fluid">
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
-          <div key={movie.poster_path} className="card bg-transparent border-0 size">
             <img
               key={movie.poster_path}
-              className="border border-5 m-2"
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              className="picture" 
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
-          </div>
         ))}
         <div className='texto p-5'>
-          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> REACTFLIX</h1>
+          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
       <div className="">
