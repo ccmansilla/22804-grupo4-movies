@@ -3,6 +3,7 @@ import { collection, getDocs, query, where, addDoc, deleteDoc, doc } from 'fireb
 import { db } from '../firebaseConfig/firebase';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import 'animate.css';
 import '../css/Comentarios.css';
 
 const MySwal = withReactContent(Swal);
