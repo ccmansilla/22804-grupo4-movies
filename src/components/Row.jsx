@@ -44,7 +44,7 @@ const Row = ({ title, fetchURL }) => {
 							className="poster"
 							src={`${base_url}${movie.poster_path}`}
 							onClick={() => handleClick(movie)}
-							alt={movie?.name || movie?.title}
+							alt={movie?.title || movie?.name || movie?.original_name}
 							title={movie?.overview}
 						/>
 						<div className="poster__description">

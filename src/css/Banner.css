@@ -41,6 +41,7 @@
 }
 
 .banner__button {
+	text-decoration: none;
 	cursor: pointer;
 	color: #fff;
 	outline: none;
