@@ -1,38 +1,62 @@
-import React, {useState, useEffect} from 'react';
-import axios from '../axios';
-import '../css/Row.css'
+import React, { useState, useEffect } from "react";
+import axios from "../axios";
+import "../css/Row.css";
 
 // url para imagenes
-const base_url = "https://image.tmdb.org/t/p/w500/";
+const base_url = "https://image.tmdb.org/t/p/original/";
 
-const Row = ({title, fetchURL}) => {
+const Row = ({ title, fetchURL }) => {
+	const [movies, setMovies] = useState([]);
+  const [trailerUrl, setTrailerUrl] = useState("");
 
-  const [movies, setMovies] = useState([]);
+	useEffect(() => {
+		async function fetchData() {
+			const request = await axios.get(fetchURL);
+			setMovies(request.data.results);
+			return request;
+		}
 
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchURL);
-      setMovies(request.data.results);
-      return request;
-    }
+		fetchData();
+	}, [fetchURL]);
 
-    fetchData();
-  
-    
-  }, [fetchURL]);
-  
+	const handleClick = (movie) => {
+		if (trailerUrl) {
+			setTrailerUrl("");
+		} else {
+			<div className="poster__description">
+				<i className="fa-solid fa-star"></i>
+				{movie.vote_average}
 
-  return (
-    <div className='row'>
-        <h2>{title}</h2>
+				<p>{movie.name}</p>
+			</div>;
+		}
+	};
 
-        <div className='posters'>
-          {movies.map(movie=>(
-            <img className='poster' src={`${base_url}${movie.poster_path}`} alt={movie.name}  />
-          ))}
-        </div>
-    </div>
-  )
-}
+	return (
+		<div className="row">
+			<h2>{title}</h2>
 
-export default Row
+			<div className="posters">
+				{movies.map((movie) => (
+					<div className="poster">
+						<img
+							key={movie.id}
+							className="poster"
+							src={`${base_url}${movie.poster_path}`}
+							onClick={() => handleClick(movie)}
+							alt={movie.name}
+						/>
+						<div className="poster__description">
+							<i className="fa-solid fa-star"></i>
+							{movie.vote_average}
+
+							<p>{movie.name}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};
+
+export default Row;

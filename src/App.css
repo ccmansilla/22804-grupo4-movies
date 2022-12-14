@@ -1,15 +1,23 @@
 * {
 	margin: 0;
-	 padding: 0;
-	box-sizing: border-box; 
+		padding: 0;
+		box-sizing: border-box;
 }
 
 body {
+	/* width: 100%; */
 	font-family: 'Montserrat', sans-serif;
-	background-color: #080F28  !important;;
+	background-color: #080F28  !important;
 	/* background: #070707 !important; */
 	color: #F5F5F5 !important;
+	
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+   
+ 
 
 /* .encabezado {
 	padding: 20px;
