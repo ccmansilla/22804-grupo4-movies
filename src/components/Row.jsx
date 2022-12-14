@@ -38,7 +38,8 @@ const Row = ({ title, fetchURL }) => {
 
 			<div className="posters">
 				{movies.map((movie) => (
-					<div className="poster">
+					<div className="">
+						<div className="poster__container">
 						<img
 							key={movie.id}
 							className="poster"
@@ -47,10 +48,9 @@ const Row = ({ title, fetchURL }) => {
 							alt={movie.name}
 						/>
 						<div className="poster__description">
-							<i className="fa-solid fa-star"></i>
-							{movie.vote_average}
-
-							<p>{movie.name}</p>
+							<i className="fa-solid fa-star"></i>{movie.vote_average}
+							<p className="poster__texto">{movie.name || movie.title}</p>
+						</div>
 						</div>
 					</div>
 				))}
