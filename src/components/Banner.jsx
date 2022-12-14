@@ -26,7 +26,7 @@ const Banner = () => {
 		async function fetchData() {
 			if (movieId) {
 				const request = await axios.get(
-					`/tv/${movieId}?api_key=a32b11f48864be1ba2603a1f30797443&language=en-US&append_to_response=videos,images&include_image_language=null,en`
+					`/tv/${movieId}?api_key=a32b11f48864be1ba2603a1f30797443&language=es-MX&append_to_response=videos,images&include_image_language=null,en`
 				);
 				setMovie(request.data);
 				return request;
