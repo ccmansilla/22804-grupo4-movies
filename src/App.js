@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+
 
 function App() {
   let api_key = '65ac98c7e8553bc17656ed4fe49ec9d3';
@@ -55,6 +57,13 @@ function App() {
       <h1> <img src="tmdb.svg" width="80px" alt="TMDB"/> Peliculas</h1>
        
       </div>*/} 
+     
+     <Routes>
+        <Route path="login" element={ <Footer/> } />
+      </Routes>
+
+
+
       <div className="contenedor" id="contenedor">
 
         {peliculas.map((pelicula) =>
