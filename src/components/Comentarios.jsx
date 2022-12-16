@@ -48,9 +48,9 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
         const fechaString = fecha.getDate()  + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear();
         e.preventDefault();
         await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: usuario, Fecha: fechaString, Comentario: comentario });
-        setComentarios(...comentario);
         setComentario('');
         alertaCreacion();
+        getComentarios();
     }
 
     //declaración función delete para eliminar registros
@@ -98,11 +98,11 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
         })
 
     }
-/*
+
     //declaramos el useEffect
     useEffect(() => {
         getComentarios();
-    }, [])*/
+    }, [])
 
     //mostrar datos en estructura    
     return (
