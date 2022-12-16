@@ -20,7 +20,8 @@ function Poster() {
     fetchData();
   }, [fetchURL]);
 
-  const Descargar = (e) => {
+  //funcion que crea el wallpaper con html2canvas
+  const Descargar = () => {
     const poster = document.querySelector("#poster");
     html2canvas(poster, { allowTaint: true, useCORS: true, imageTimeout: 30000 }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
@@ -29,7 +30,6 @@ function Poster() {
       link.href = img;
       link.click();
     });
-
   }
 
   return (
