@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import '../css/Poster.css';
 
 function Poster() {
+  const API_KEY = "65ac98c7e8553bc17656ed4fe49ec9d3";
   const [movies, setMovies] = useState([]);
   const fetchURL = requests.fetchNetflixOrginals;
 
@@ -21,7 +22,7 @@ function Poster() {
 
   const Descargar = (e) => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true }).then((canvas) => {
+    html2canvas(poster, { allowTaint: true, useCORS: true, imageTimeout: 30000 }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
       link.download = "poster.png";
@@ -38,7 +39,7 @@ function Poster() {
             <img
               key={movie.poster_path}
               className="picture" 
-              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}?api_key=${API_KEY}`}
               alt={movie.title}
             />
         ))}
