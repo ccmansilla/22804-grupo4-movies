@@ -10,7 +10,7 @@ const Peliculas = () => {
 		<div className="App">
 			<Banner />
 			<Row
-				title="SERIES ORIGINALES DE NETFLIX"
+				title="Series Originales de NETFLIX"
 				fetchURL={requests.fetchNetflixOrginals}
 			/>
 			<Row title="Populares" fetchURL={requests.fetchTrending} />

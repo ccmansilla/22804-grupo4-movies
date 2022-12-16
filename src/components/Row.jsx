@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import "../css/Row.css";
+import Swal from 'sweetalert2';
 
 // url para imagenes
 const base_url = "https://image.tmdb.org/t/p/w300/";
 
 const Row = ({ title, fetchURL }) => {
 	const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
+	const [trailerUrl, setTrailerUrl] = useState("");
 
 	useEffect(() => {
 		async function fetchData() {
@@ -20,16 +21,31 @@ const Row = ({ title, fetchURL }) => {
 	}, [fetchURL]);
 
 	const handleClick = (movie) => {
-		if (trailerUrl) {
-			setTrailerUrl("");
-		} else {
-			<div className="poster__description">
-				<i className="fa-solid fa-star"></i>
-				{movie.vote_average}
 
-				<p>{movie.name}</p>
-			</div>;
-		}
+		const name = movie?.title || movie?.name || movie?.original_name;
+		const year = (new Date(movie?.first_air_date || movie?.release_date)).getFullYear();
+		const description = (movie.overview === '')? '' : 'Descripcion:';
+		console.log(movie);
+
+		Swal.fire({
+			imageUrl: `${base_url}/${movie.poster_path}`,
+			imageHeight: 300,
+			imageAlt: 'Poster',
+			title: `<h2>${name} (${year})</h2>`,			
+			html: `<div>
+					<h3 class='text-start'>${description}</h3>
+					<p class='text-start'>${movie.overview}</p>
+				   </div>`,
+			confirmButtonText: 'Cerrar',
+			color: '#fff',
+			background: 'rgba(51, 51, 51)',
+			showClass: {
+				popup: 'animate__animated animate__fadeInDown'
+			},
+			hideClass: {
+				popup: 'animate__animated animate__fadeOutUp'
+			}
+		});
 	};
 
 	return (
