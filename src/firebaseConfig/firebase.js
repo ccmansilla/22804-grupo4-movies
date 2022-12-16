@@ -2,16 +2,16 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDDgPrhQp_iBzZRA9eqC5JVDmZAIaU5rW4",
-  authDomain: "movies-2fec4.firebaseapp.com",
-  projectId: "movies-2fec4",
-  storageBucket: "movies-2fec4.appspot.com",
-  messagingSenderId: "208095264051",
-  appId: "1:208095264051:web:826e2a83d579f123629246",
-  measurementId: "G-CR1TZV41BC"
+  "projectId": "peliculas-22804",
+  "appId": "1:721496642600:web:45c66fbcbe0616a68a911d",
+  "storageBucket": "peliculas-22804.appspot.com",
+  "locationId": "us-central",
+  "apiKey": "AIzaSyAEEtPpBdXKzuDbLVijlbS8hCNAXHcxV0o",
+  "authDomain": "peliculas-22804.firebaseapp.com",
+  "messagingSenderId": "721496642600"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);

@@ -6,7 +6,6 @@ import withReactContent from 'sweetalert2-react-content';
 import 'animate.css';
 import '../css/Comentarios.css';
 
-const MySwal = withReactContent(Swal);
 
 function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
 

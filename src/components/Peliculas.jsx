@@ -1,9 +1,9 @@
 import React from "react";
-import Comentarios from "./Comentarios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "./Row";
 import requests from "../requests";
 import Banner from "./Banner";
+import Comentarios from "./Comentarios";
 
 const Peliculas = () => {
 	return (
@@ -35,10 +35,9 @@ const Peliculas = () => {
 				fetchURL={requests.fetchRomanceMovies}
 			/>
 			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
-
 			<Comentarios />
 		</div>
 	);
-};
+}
 
 export default Peliculas;
