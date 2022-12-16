@@ -20,7 +20,8 @@ function Poster() {
     fetchData();
   }, [fetchURL]);
 
-  const Descargar = (e) => {
+  //funcion que crea el wallpaper y lo descarga
+  const Descargar = () => {
     const poster = document.querySelector("#poster");
     html2canvas(poster, { allowTaint: true, useCORS: true, imageTimeout: 30000 }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
