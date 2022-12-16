@@ -1,5 +1,4 @@
 import React from "react";
-import Comentarios from "./Comentarios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "./Row";
 import requests from "../requests";
@@ -35,10 +34,8 @@ const Peliculas = () => {
 				fetchURL={requests.fetchRomanceMovies}
 			/>
 			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
-
-			<Comentarios />
 		</div>
 	);
-};
+}
 
 export default Peliculas;
