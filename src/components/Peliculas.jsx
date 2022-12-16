@@ -5,7 +5,7 @@ import requests from "../requests";
 import Banner from "./Banner";
 import Comentarios from "./Comentarios";
 
-const Peliculas = () => {
+const Peliculas = ({usuario}) => {
 	return (
 		<div className="App">
 			<Banner />
@@ -35,7 +35,7 @@ const Peliculas = () => {
 				fetchURL={requests.fetchRomanceMovies}
 			/>
 			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
-			<Comentarios />
+			<Comentarios usuario={usuario}/>
 		</div>
 	);
 }

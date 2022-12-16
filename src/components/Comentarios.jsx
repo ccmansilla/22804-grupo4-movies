@@ -7,7 +7,7 @@ import 'animate.css';
 import '../css/Comentarios.css';
 
 
-function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
+function Comentarios({ usuario = '', pelicula = '' }) {
 
     //configuración de los hook
     const [comentarios, setComentarios] = useState([]);
@@ -44,10 +44,11 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
 
     //agregar comentario
     const agregarComentario = async (e) => {
+        const email = (usuario === '')? 'Anonimo' : usuario.email;
         const fecha = new Date();
         const fechaString = fecha.getDate()  + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear();
         e.preventDefault();
-        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: usuario, Fecha: fechaString, Comentario: comentario });
+        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: email, Fecha: fechaString, Comentario: comentario });
         setComentario('');
         alertaCreacion();
         getComentarios();

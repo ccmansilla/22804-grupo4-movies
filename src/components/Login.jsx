@@ -17,7 +17,7 @@ function Login() {
 
   return (
     <div>
-      {usuario ? <Peliculas /> : <Logueo setUsuario={setUsuario} />}
+      {usuario ? <Peliculas usuario={usuario}/> : <Logueo setUsuario={setUsuario} />}
     </div>
   )
 }
