@@ -46,8 +46,9 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
     //agregar comentario
     const agregarComentario = async (e) => {
         const fecha = new Date();
+        const fechaString = fecha.getDate()  + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear();
         e.preventDefault();
-        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: usuario, Fecha: fecha.toString(), Comentario: comentario });
+        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: usuario, Fecha: fechaString, Comentario: comentario });
         setComentario('');
         alertaCreacion();
         getComentarios();

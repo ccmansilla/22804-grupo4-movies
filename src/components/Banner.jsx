@@ -77,7 +77,7 @@ const Banner = () => {
 							<i className="fa-solid fa-film"></i>Mi Lista
 						</button>{" "}
 						<Link to="/poster" className="banner__button">
-							WallPaper
+							<i class="fa-regular fa-image"></i> Wallpaper
 						</Link>
 					</div>
 					<h3 className="banner__description">
