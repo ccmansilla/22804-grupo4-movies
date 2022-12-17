@@ -1,10 +1,10 @@
-#Comision 22804 Grupo 4 ReactFlix
+# Comision 22804 Grupo 4 ReactFlix
 
-##Descripcion:
+## Descripcion:
 ReactFlix es una aplicacion web de peliculas donde los usuarios podran registrarse, ver la descripcion de las peliculas, poder comentar y
 tambien podran descargar un wallpaper con poster de algunas peliculas.
 
-##Herramientas:
+## Herramientas:
 - React JS
 - React Router
 - Bootstrap
@@ -12,7 +12,7 @@ tambien podran descargar un wallpaper con poster de algunas peliculas.
 - Firebase
 - API TMDB
 
-##Integrantes:
+## Integrantes:
 
 - Carlos Mansilla	DNI: 27054670  email: carloscmansilla@gmail.com
 - Fernanda Flores	DNI: 34731664  email: f.flores016@gmail.com
