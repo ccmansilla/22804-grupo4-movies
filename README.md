@@ -1,21 +1,33 @@
-# Comision 22804 Grupo 4 ReactFlix
+# Comision22804 Grupo4 ReactFlix
 
-## Descripcion:
+### Descripcion:
 ReactFlix es una aplicacion web de peliculas donde los usuarios podran registrarse, ver la descripcion de las peliculas, poder comentar y
 tambien podran descargar un wallpaper con poster de algunas peliculas.
 
-## Herramientas:
+### Herramientas:
 - React JS
 - React Router
 - Bootstrap
 - SweetAlert2
+- Animate.css
 - Firebase
 - API TMDB
 
-## Integrantes:
+### Integrantes:
 
-- Carlos Mansilla	DNI: 27054670  email: carloscmansilla@gmail.com
-- Fernanda Flores	DNI: 34731664  email: f.flores016@gmail.com
-- Franco Yunes      DNI: 34934312  email: franco.yunes@gmail.com
-- Giannina Miñano	DNI: 95647117  email: g.isabella.md@gmail.com
-- Maribel De Marco  DNI: 33022562  email: maribeldemarco@gmail.com 
+- Carlos Mansilla  
+    email: carloscmansilla@gmail.com  
+    linkedin: https://www.linkedin.com/in/carloscmansilla/  
+- Fernanda Flores  
+    email: f.flores016@gmail.com  
+    linkedin: http://www.linkedin.com/in/ferffloress  
+
+- Franco Yunes     
+    email: franco.yunes@gmail.com  
+    linkedin: https://www.linkedin.com/in/francoyunes/  
+- Giannina Miñano  
+    email: g.isabella.md@gmail.com  
+    linkedin: https://www.linkedin.com/in/gianninaminano/  
+- Maribel De Marco  
+    email: maribeldemarco@gmail.com  
+    linkedin: https://www.linkedin.com/in/maribel-demarco/  
