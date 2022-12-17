@@ -1,4 +1,4 @@
-# Comision22804 Grupo4 ReactFlix
+# Comision22804 Grupo4 ReactFliX
 
 ### Descripcion:
 ReactFlix es una aplicacion web de peliculas donde los usuarios podran registrarse, ver la descripcion de las peliculas, poder comentar y
@@ -31,3 +31,7 @@ tambien podran descargar un wallpaper con poster de algunas peliculas.
 - Maribel De Marco  
     email: maribeldemarco@gmail.com  
     linkedin: https://www.linkedin.com/in/maribel-demarco/  
+
+
+### Link de la aplicacion:  
+[ReactFliX](https://22804-grupo4-movies.netlify.app/)
