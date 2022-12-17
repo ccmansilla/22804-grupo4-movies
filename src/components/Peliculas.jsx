@@ -35,7 +35,7 @@ const Peliculas = ({usuario}) => {
 				fetchURL={requests.fetchRomanceMovies}
 			/>
 			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
-			<Comentarios usuario={usuario.email}/>
+			<Comentarios usuario={usuario}/>
 		</div>
 	);
 }

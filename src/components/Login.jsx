@@ -13,13 +13,12 @@ function Login() {
   })
   } ,[])
 
-
-
   return (
     <div>
-      {usuario ? <Peliculas usuario={usuario}/> : <Logueo setUsuario={setUsuario} />}
+      {usuario ? <Peliculas usuario={usuario.email}/> : <Logueo setUsuario={setUsuario} />}
     </div>
   )
+  
 }
 
 export default Login
