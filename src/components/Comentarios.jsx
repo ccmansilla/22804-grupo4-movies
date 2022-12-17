@@ -9,6 +9,8 @@ import '../css/Comentarios.css';
 
 function Comentarios({ usuario = '', pelicula = '' }) {
 
+    console.log(usuario);
+
     //configuración de los hook
     const [comentarios, setComentarios] = useState([]);
     const [comentario, setComentario] = useState('');
