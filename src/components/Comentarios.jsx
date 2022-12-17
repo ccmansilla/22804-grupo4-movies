@@ -9,8 +9,6 @@ import '../css/Comentarios.css';
 
 function Comentarios({ usuario = '', pelicula = '' }) {
 
-    console.log(usuario);
-
     //configuración de los hook
     const [comentarios, setComentarios] = useState([]);
     const [comentario, setComentario] = useState('');
@@ -127,7 +125,7 @@ function Comentarios({ usuario = '', pelicula = '' }) {
                 <div key={item.id} className='card bg-dark text-white m-2'>
                     <div className="card-header bgCardHeader p-2">
                         <div className='d-flex justify-content-end'>
-                            {(item.Usuario != usuario)? ('') :
+                            {(item.Usuario !== usuario)? ('') :
                                 (<div> <button onClick={() => { confirmDelete(item.id) }} className="banner__button ms-2"><i className="fa-solid fa-trash "></i></button> </div>)
                             }
                         </div>
