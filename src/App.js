@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
 
 function App() {
@@ -53,10 +54,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-   {/*   <div className='encabezado'>
-      <h1> <img src="tmdb.svg" width="80px" alt="TMDB"/> Peliculas</h1>
-       
-      </div>*/} 
+  
      
      <Routes>
         <Route path="login" element={ <Footer/> } />
