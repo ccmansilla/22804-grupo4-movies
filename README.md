@@ -15,20 +15,20 @@ tambien podran descargar un wallpaper con poster de algunas peliculas.
 
 ### :pushpin: Integrantes:
 
-- Carlos Mansilla  
+- **_Carlos Mansilla_**  
     email: carloscmansilla@gmail.com  
     linkedin: https://www.linkedin.com/in/carloscmansilla/  
-- Fernanda Flores  
+- **_Fernanda Flores_**    
     email: f.flores016@gmail.com  
     linkedin: http://www.linkedin.com/in/ferffloress  
 
-- Franco Yunes     
+- **_Franco Yunes_**       
     email: franco.yunes@gmail.com  
     linkedin: https://www.linkedin.com/in/francoyunes/  
-- Giannina Miñano  
+- **_Giannina Miñano_**    
     email: g.isabella.md@gmail.com  
     linkedin: https://www.linkedin.com/in/gianninaminano/  
-- Maribel De Marco  
+- **_Maribel De Marco_**    
     email: maribeldemarco@gmail.com  
     linkedin: https://www.linkedin.com/in/maribel-demarco/  
 
