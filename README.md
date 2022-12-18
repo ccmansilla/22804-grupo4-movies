@@ -1,10 +1,10 @@
-# Comision22804 Grupo4 ReactFliX
+# :film_strip: Comision22804 Grupo4 ReactFliX
 
-### Descripcion:
+### :pushpin: Descripcion:
 ReactFlix es una aplicacion web de peliculas donde los usuarios podran registrarse, ver la descripcion de las peliculas, poder comentar y
 tambien podran descargar un wallpaper con poster de algunas peliculas.
 
-### Herramientas:
+### :pushpin: Herramientas:
 - React JS
 - React Router
 - Bootstrap
@@ -13,7 +13,7 @@ tambien podran descargar un wallpaper con poster de algunas peliculas.
 - Firebase
 - API TMDB
 
-### Integrantes:
+### :pushpin: Integrantes:
 
 - Carlos Mansilla  
     email: carloscmansilla@gmail.com  
@@ -33,5 +33,5 @@ tambien podran descargar un wallpaper con poster de algunas peliculas.
     linkedin: https://www.linkedin.com/in/maribel-demarco/  
 
 
-### Link de la aplicacion:  
-[ReactFliX](https://22804-grupo4-movies.netlify.app/)
+### :pushpin: Link de la aplicacion:  
+:earth_americas: [ReactFliX](https://22804-grupo4-movies.netlify.app/)
