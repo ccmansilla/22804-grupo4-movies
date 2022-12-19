@@ -8,7 +8,7 @@ const Logout = () => {
     };
 
     return (
-        <button className="banner__button" onClick={cerrarSesion}>Cerrar sesión</button>
+        <button className="banner__button" onClick={cerrarSesion}><i class="fa-solid fa-power-off"></i>Salir</button>
     )
 };
 

@@ -1,13 +1,12 @@
 import React from 'react';
-//import { useState } from "react";
+import { useState } from "react";
 import { app } from "../fb";
 import "../css/Logueo.css";
 import Swal from 'sweetalert2';
 
 function Logueo(props) {
 
-    const [isRegistrando, setIsRegistrando] = React.useState(false);  
-
+    const [isRegistrando, setIsRegistrando] = useState(false);  
 
     function crearUsuario(correo, password) {
         app.auth().createUserWithEmailAndPassword(correo, password)
@@ -28,7 +27,7 @@ function Logueo(props) {
     function iniciarSesion(correo, password) {
         app.auth().signInWithEmailAndPassword(correo, password).then((usuarioFirebase) => {
             console.log("sesión iniciada con:", usuarioFirebase.user);
-            props.setUsuario(usuarioFirebase);
+            props.setUsuario(usuarioFirebase.user);
         })
             .catch((error) => {
                 if (error.code === "auth/wrong-password") {
