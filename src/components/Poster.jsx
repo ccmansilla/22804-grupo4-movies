@@ -5,6 +5,8 @@ import requests from "../requests";
 import html2canvas from 'html2canvas';
 import { Link } from "react-router-dom";
 import '../css/Poster.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function Poster() {
   const API_KEY = "65ac98c7e8553bc17656ed4fe49ec9d3";
@@ -33,7 +35,8 @@ function Poster() {
   }
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid">      
+			<Header />
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
             <img
@@ -48,9 +51,9 @@ function Poster() {
         </div>
       </div>
       <div className="mb-5">
-        <Link className='poster__button' to="/"><i class="fa-solid fa-house"></i> Volver</Link>
-        <button onClick={Descargar} type="button" className='poster__button ms-1'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
+        <button onClick={Descargar} type="button" className='poster__button ms-5'><i className="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
+			<Footer />
     </div>
   );
 }
