@@ -1,15 +1,12 @@
 import React from 'react';
-
 import { Link } from "react-router-dom";
 
 function Footer() {
 
-
-
   return (
     <div className="footer">
 
-      <Link to="wallpaper" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Wallpaper</Link>
+      <Link to="/poster" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Wallpaper</Link>
 
       <div className='contacto'> Contacto
         <a href="https://github.com/ccmansilla/22804-grupo4-movies" target="_blank" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>
@@ -36,10 +33,7 @@ function Footer() {
     </div>
 
 
-
-
-  )
-
+  );
 
 }
 

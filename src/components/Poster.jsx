@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import axios from '../axios';
 import requests from "../requests";
 import html2canvas from 'html2canvas';
-import { Link } from "react-router-dom";
 import '../css/Poster.css';
+import '../App.css';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -47,7 +47,7 @@ function Poster() {
             />
         ))}
         <div className='texto p-5'>
-          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
+          <h1 className="text-center"><i className="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
       <div className="mb-5">
