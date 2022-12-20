@@ -4,10 +4,13 @@ import Row from "./Row";
 import requests from "../requests";
 import Banner from "./Banner";
 import Comentarios from "./Comentarios";
+import Header from './Header';
+import Footer from './Footer';
 
 const Peliculas = ({usuario}) => {
 	return (
 		<div className="App">
+			<Header />
 			<Banner />
 			<Row
 				title="Series Originales de NETFLIX"
@@ -36,6 +39,7 @@ const Peliculas = ({usuario}) => {
 			/>
 			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
 			<Comentarios usuario={usuario}/>
+			<Footer />
 		</div>
 	);
 }

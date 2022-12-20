@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "../axios";
 import requests from "../requests";
 import "../css/Banner.css";
-import Logout from "./Logout";
 
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
@@ -76,11 +75,7 @@ const Banner = () => {
 						</button>
 						<button className="banner__button">
 							<i className="fa-solid fa-film"></i>Mi Lista
-						</button>{" "}
-						<Link to="/poster" className="banner__button">
-							<i class="fa-regular fa-image"></i> Wallpaper
-						</Link>
-						<Logout />
+						</button>
 					</div>
 					<h3 className="banner__description">
 						{" "}
