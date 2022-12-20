@@ -5,9 +5,20 @@
     padding: 0;
 }
 
+.contenedor {
+    width: 100%
+}
+
+.marco {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 10%;
+    height: 70vh;
+    overflow: scroll;
+}
+
 .tile {
-    margin: 20px;
-    background-color: #000;
+    background-color: #100a1f;
     width: 1600px;
     height: 900px;
 }
@@ -19,18 +30,17 @@
 }
 
 .texto {
-    width: 660px;
-    height: 150px;
-    position: absolute;
-    top: 660px;
-    left: 900px;
+    width: 800px;
+    height: 300px;
 }
 
 .texto h1 {
+    display: block;
+    padding-top: 80px;
     font-family: 'Zen Dots', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     font-weight: bolder;
-    color: rgb(14, 29, 199);
+    color: rgb(227, 22, 22);
     text-shadow: 2px 0 #FFF, -2px 0 #FFF, 0 2px #FFF, 0 -2px #FFF,
         1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF, -1px 1px #FFF;
 }

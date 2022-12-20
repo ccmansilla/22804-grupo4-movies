@@ -9,7 +9,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 function Poster() {
-  const API_KEY = "65ac98c7e8553bc17656ed4fe49ec9d3";
   const [movies, setMovies] = useState([]);
   const fetchURL = requests.fetchNetflixOrginals;
 
@@ -35,14 +34,15 @@ function Poster() {
   }
 
   return (
-    <div className="container-fluid">      
+    <div className="contenedor">      
 			<Header />
+      <div className="marco">
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
             <img
               key={movie.poster_path}
               className="picture" 
-              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}?api_key=${API_KEY}`}
+              src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
         ))}
@@ -50,7 +50,8 @@ function Poster() {
           <h1 className="text-center"><i className="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
-      <div className="mb-5">
+      </div>
+      <div className="m-5">
         <button onClick={Descargar} type="button" className='poster__button ms-5'><i className="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
 			<Footer />
