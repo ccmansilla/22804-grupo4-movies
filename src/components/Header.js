@@ -9,7 +9,7 @@ function Header() {
         <div className="header">
             <img className="logoreacflix" src="./assets/reacflixlogo.svg" />
             <Link to="/" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Peliculas</Link>
-            <Link to="" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Contacto</Link>
+            <Link to="/form" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Contacto</Link>
             <NavLink to="/poster" className="links">
                 <i className="fa-regular fa-image"></i> Wallpaper
             </NavLink>
