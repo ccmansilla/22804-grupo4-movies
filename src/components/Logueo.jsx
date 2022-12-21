@@ -69,14 +69,16 @@ function Logueo(props) {
 
     return (
         <div className="logueo">
+            <div className='tarjeta'>
+            <img className="logo" src="./assets/reacflixlogo.svg" />
             <h2>{isRegistrando ? "Registrate" : "Inicia sesión"}</h2>
             <form onSubmit={sumbmitHandler}>
                 <div>
-                    <label htmlFor='emailField'>Correo:</label>
+                    <label htmlFor='emailField'><i className="fa-solid fa-envelope"></i>Correo:</label>
                     <input type="email" id="emailField" />
                 </div>
                 <div>
-                    <label htmlFor='passwordField'>Contraseña:</label>
+                    <label htmlFor='passwordField'><i className="fa-solid fa-lock"></i>Contraseña:</label>
                     <input type="password" id="passwordField" />
                 </div>
                 <button className="btn btn-info" type="submit">
@@ -92,6 +94,7 @@ function Logueo(props) {
                     : "¿No tenés cuenta? Registrate."}
 
             </button>
+            </div>
         </div>
     );
 }

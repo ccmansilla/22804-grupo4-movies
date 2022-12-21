@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import React from 'react';
 import Logout from "./Logout";
 
@@ -10,9 +10,9 @@ function Header() {
             <img className="logoreacflix" src="./assets/reacflixlogo.svg" />
             <Link to="/" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Peliculas</Link>
             <Link to="" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>Contacto</Link>
-            <Link to="/poster" className="links">
+            <NavLink to="/poster" className="links">
                 <i className="fa-regular fa-image"></i> Wallpaper
-            </Link>
+            </NavLink>
             <Logout />
         </div>
     )
