@@ -1,78 +1,104 @@
 * {
 	margin: 0;
-	 padding: 0;
-	box-sizing: border-box; 
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
+	/* width: 100%; */
 	font-family: 'Montserrat', sans-serif;
-	background-color: #080F28  !important;;
+	background-color: #080F28 !important;
 	/* background: #070707 !important; */
 	color: #F5F5F5 !important;
+
 }
 
-/* .encabezado {
-	padding: 20px;
-	background-color: #241744;
-	color: #F5F5F5;
-	text-align: center;
+body::-webkit-scrollbar {
+	display: none;
 }
 
-.contenedor {
-	width: 90%;
-	max-width: 1000px;
-	margin: 40px auto 100px auto;
-
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	-ms-grid-columns: repeat(4, 1fr);
-	-ms-grid: grid;
-	gap: 40px;
-}
-
-.contenedor .pelicula {
-	text-align: center;
-}
-
-.contenedor .pelicula .titulo {
-	font-size: 16px;
-	font-weight: 600;
-}
-
-.contenedor .pelicula .poster {
-	width: 100%;
-	margin-bottom: 10px;
-	border-radius: 15px;
-}
-
-.paginacion {
-	position: fixed;
-	bottom: 0;
-	background: #100a1f;
-	width: 100%;
+.header {
 	display: flex;
-	justify-content: center;
-	gap: 20px;
+	justify-content: space-around;
+	width: 100%;
+	background-color: #100a1f;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 500;
 	padding: 10px;
-}
-
-.paginacion button {
-	cursor: pointer;
-	border: none;
-	display: flex;
 	align-items: center;
-	justify-content: center;
-	text-align: center;
-	height: 50px;
-	width: 200px;
-	background: #241744;
-	color: #fff;
-	border-radius: 100px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	transition: .3s ease all;
+	/*position: fixed;*/
 }
 
-.paginacion button:hover {
-	background: #137c32;
-} */
+.footer {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	background-color: #100a1f;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 500;
+	padding: 10px;
+	align-items: start !important;
+
+}
+
+.contacto {
+	display: flex;
+	flex-direction: column;
+	row-gap: 22px;
+
+}
+
+.logoredes {
+	width: 32px;
+	height: 32px;
+	margin-right: 3rem;
+}
+
+.logoreacflix {
+	width: 10rem;
+	height: 8rem;
+}
+
+.links {
+	color: inherit;
+	font-size: 1.4rem;
+	text-decoration: inherit;
+}
+
+.contacto div {
+	display: flex;
+	column-gap: 0.5rem;
+	align-items: center;
+}
+
+.fonticon {
+	font-size: 1.5rem;
+	margin-right: 1rem;
+}
+
+.contacto p {
+	margin-bottom: 0px;
+	font-size: 1.2rem;
+}
+
+.nuestroequipo p {
+	font-size: 1.3rem !important;
+	margin: 0px !important;
+	display: inline;
+	font-family: 'Montserrat', sans-serif !important;
+	font-weight: 500 !important;
+}
+
+button.nuestroequipo {
+	padding: 0 !important;
+	font-family: 'Montserrat', sans-serif !important;
+
+}
+
+.nuestroequipo {
+	background-color: #100a1f !important;
+	height: 1.3rem !important;
+	border: none !important;
+}

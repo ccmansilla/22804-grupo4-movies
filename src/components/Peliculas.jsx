@@ -1,29 +1,47 @@
 import React from "react";
-import Comentarios from "./Comentarios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "./Row";
 import requests from "../requests";
 import Banner from "./Banner";
+import Comentarios from "./Comentarios";
+import Header from './Header';
+import Footer from './Footer';
 
-const Peliculas = () => {
+const Peliculas = ({usuario}) => {
 	return (
 		<div className="App">
-		  <Banner/>
-		  <Row
-			title="NETFLIX ORIGINALS"
-			fetchURL={requests.fetchNetflixOrginals}
-			// isLargeRow={true}
-		  />
-		  <Row title="Trending NOW" fetchURL={requests.fetchTrending} />
-		  <Row title="Top Rated" fetchURL={requests.fetchTopRated} />
-		  <Row title="Action Movies" fetchURL={requests.fetchActionMovies} />
-		  <Row title="Comedy Movies" fetchURL={requests.fetchComedyMovies} />
-		  <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
-		  <Row title="Romantic Movies" fetchURL={requests.fetchRomanceMovies} />
-		  <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
-		  <Comentarios />
+			<Header />
+			<Banner />
+			<Row
+				title="Series Originales de NETFLIX"
+				fetchURL={requests.fetchNetflixOrginals}
+			/>
+			<Row title="Populares" fetchURL={requests.fetchTrending} />
+			<Row
+				title="Películas Mejor Puntuadas"
+				fetchURL={requests.fetchTopRated}
+			/>
+			<Row
+				title="Películas: Acción"
+				fetchURL={requests.fetchActionMovies}
+			/>
+			<Row
+				title="Películas: Comedia"
+				fetchURL={requests.fetchComedyMovies}
+			/>
+			<Row
+				title="Películas: Terror"
+				fetchURL={requests.fetchHorrorMovies}
+			/>
+			<Row
+				title="Películas: Románticas"
+				fetchURL={requests.fetchRomanceMovies}
+			/>
+			<Row title="Documentales" fetchURL={requests.fetchDocumentaries} />
+			<Comentarios usuario={usuario}/>
+			<Footer />
 		</div>
-	  );
+	);
 }
 
 export default Peliculas;

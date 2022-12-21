@@ -5,9 +5,20 @@
     padding: 0;
 }
 
+.contenedor {
+    width: 100%
+}
+
+.marco {
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 10%;
+    height: 70vh;
+    overflow: scroll;
+}
+
 .tile {
-    margin: 20px;
-    background-color: #000;
+    background-color: #100a1f;
     width: 1600px;
     height: 900px;
 }
@@ -19,18 +30,17 @@
 }
 
 .texto {
-    width: 660px;
-    height: 150px;
-    position: absolute;
-    top: 660px;
-    left: 900px;
+    width: 800px;
+    height: 300px;
 }
 
 .texto h1 {
+    display: block;
+    padding-top: 80px;
     font-family: 'Zen Dots', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     font-weight: bolder;
-    color: rgb(199, 14, 14);
+    color: rgb(227, 22, 22);
     text-shadow: 2px 0 #FFF, -2px 0 #FFF, 0 2px #FFF, 0 -2px #FFF,
         1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF, -1px 1px #FFF;
 }
@@ -43,22 +53,24 @@
     padding-left: 2rem;
     padding-bottom: 0.5rem;
     padding-right: 2rem;
-	cursor: pointer;
-	color: #fff;
-	outline: none;
-	border: none;
-	font-weight: 700;
-	border-radius: 0.2vw;
-	padding-left: 2rem;
-	padding-right: 2rem;
-	margin-right: 1rem;
-	padding-top: 0.5rem;
-	background-color: rgba(51, 51, 51, 0.9);
-	padding-bottom: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+    background-color: #2D3760;
+    opacity: 0.9;
 }
 
 .poster__button:hover {
-	color: #000;
-	background-color: #e6e6e6;
-	transition: all 0.2s;
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
 }

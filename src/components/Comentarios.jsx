@@ -3,11 +3,11 @@ import { collection, getDocs, query, where, addDoc, deleteDoc, doc } from 'fireb
 import { db } from '../firebaseConfig/firebase';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import 'animate.css';
 import '../css/Comentarios.css';
 
-const MySwal = withReactContent(Swal);
 
-function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
+function Comentarios({ usuario = '', pelicula = '' }) {
 
     //configuración de los hook
     const [comentarios, setComentarios] = useState([]);
@@ -44,9 +44,11 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
 
     //agregar comentario
     const agregarComentario = async (e) => {
+        const email = (usuario === '')? 'Anonimo' : usuario;
         const fecha = new Date();
+        const fechaString = fecha.getDate()  + "/" + (fecha.getMonth()+1) + "/" + fecha.getFullYear();
         e.preventDefault();
-        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: usuario, Fecha: fecha.toString(), Comentario: comentario });
+        await addDoc(comentariosCollection, { Pelicula: pelicula, Usuario: email, Fecha: fechaString, Comentario: comentario });
         setComentario('');
         alertaCreacion();
         getComentarios();
@@ -113,7 +115,7 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
                         <label for="comentario" className="form-label">Comentario</label>
                         <textarea className="form-control bg-dark text-white" id="comentario" name="comentario" rows="3" value={comentario} onChange={(e) => setComentario(e.target.value)} required></textarea>
                     </div>
-                    <button type="submit" className="banner__button"><i class="fa-sharp fa-solid fa-plus"></i> Agregar</button>
+                    <button type="submit" className="banner__button"><i class="fa-sharp fa-solid fa-plus"></i>Agregar</button>
                 </form>
             </div>
 
@@ -123,7 +125,9 @@ function Comentarios({ usuario = 'Anonimo', pelicula = '' }) {
                 <div key={item.id} className='card bg-dark text-white m-2'>
                     <div className="card-header bgCardHeader p-2">
                         <div className='d-flex justify-content-end'>
-                            <div> <button onClick={() => { confirmDelete(item.id) }} className="banner__button ms-2"><i className="fa-solid fa-trash "></i></button> </div>
+                            {(item.Usuario !== usuario)? ('') :
+                                (<div> <button onClick={() => { confirmDelete(item.id) }} className="banner__button ms-2"><i className="fa-solid fa-trash "></i></button> </div>)
+                            }
                         </div>
                         <h4 className="card-title">{item.Usuario}</h4>
                         <h6 className="card-subtitle mb-2 fs-6 fw-light">{item.Fecha}</h6>

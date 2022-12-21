@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 import axios from '../axios';
 import requests from "../requests";
 import html2canvas from 'html2canvas';
-import { Link } from "react-router-dom";
 import '../css/Poster.css';
+import '../App.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function Poster() {
   const [movies, setMovies] = useState([]);
@@ -19,20 +21,22 @@ function Poster() {
     fetchData();
   }, [fetchURL]);
 
-  const Descargar = (e) => {
+  //funcion que crea el wallpaper con html2canvas
+  const Descargar = () => {
     const poster = document.querySelector("#poster");
-    html2canvas(poster, { allowTaint: true, useCORS: true }).then((canvas) => {
+    html2canvas(poster, { allowTaint: true, useCORS: true, imageTimeout: 30000 }).then((canvas) => {
       let img = canvas.toDataURL("poster/png");
       let link = document.createElement("a");
       link.download = "poster.png";
       link.href = img;
       link.click();
     });
-
   }
 
   return (
-    <div className="container-fluid">
+    <div className="contenedor">      
+			<Header />
+      <div className="marco">
       <div className="tile row" id='poster'>
         {movies.map((movie) => (
             <img
@@ -43,13 +47,14 @@ function Poster() {
             />
         ))}
         <div className='texto p-5'>
-          <h1 className="text-center"><i class="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
+          <h1 className="text-center"><i className="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
         </div>
       </div>
-      <div className="mb-5">
-        <Link className='poster__button' to="/"><i class="fa-solid fa-house"></i> Volver</Link>
-        <button onClick={Descargar} type="button" className='poster__button ms-1'><i class="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
+      <div className="m-5">
+        <button onClick={Descargar} type="button" className='poster__button ms-5'><i className="fa-sharp fa-solid fa-download"></i> Descargar</button>
+      </div>
+			<Footer />
     </div>
   );
 }
