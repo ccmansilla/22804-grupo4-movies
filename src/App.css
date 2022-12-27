@@ -82,15 +82,32 @@ body {
 
 .header {
 	display: flex;
-	justify-content:space-around;
-	width: 100%;
+	justify-content:center !important;
+	column-gap: 10vh;
+	width: 100% !important;
 	background-color: #100a1f;
 	color: white;
-	font-size: 1.3rem;
-	font-weight: 500;
 	padding: 10px;
 	align-items: center;
 	/*position: fixed;*/
+}
+
+.headertitulos {
+display: flex;
+justify-content: center !important;
+font-size: 1.3rem;
+	font-weight: 500;
+column-gap: 10vh;
+}
+
+.navbar-toggler span{
+	filter: invert(100%);
+}
+
+.hamburgernav  {
+	display: flex;
+	justify-content: center !important;
+	
 }
 
 .footer {
