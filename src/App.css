@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
 	font-weight: 500;
 	padding: 10px;
 	align-items: start !important;
- row-gap: 10vh !important;
+	row-gap: 10vh !important;
 }
 
 .contacto {
@@ -65,6 +65,10 @@ body::-webkit-scrollbar {
 .links {
 	color: inherit;
 	text-decoration: inherit;
+}
+
+.active {
+	text-decoration: underline !important;
 }
 
 .contacto div {
@@ -94,7 +98,7 @@ body::-webkit-scrollbar {
 button.nuestroequipo {
 	padding: 0 !important;
 	margin-top: 0px !important;
-	
+
 
 }
 
@@ -103,6 +107,7 @@ button.nuestroequipo {
 	height: 1.3rem !important;
 	border: none !important;
 }
+
 .headertitulos {
 	display: flex;
 	justify-content: space-around !important;
@@ -110,42 +115,53 @@ button.nuestroequipo {
 	font-weight: 500;
 	width: 100% !important;
 	row-gap: 20px;
-	}
-	.navbar-toggler span{
-		filter: invert(100%);
-	}
-	.hamburgernav  {
-		display: flex;
-		justify-content: center !important;
-		
-	}
-
-	.banner__button {font-size: 1.8rem;}
-
-	.footer ul a {font-size: 1.4rem !important;
-		color: white;}
-		.footer ul {background-color: rgb(14, 14, 14);}
-
-	/* media queries */
-	@media screen and (max-width: 767px) {
-		
-		
-.headertitulos { font-size: 1.4rem;}
-
-.footer { font-size: 1.4rem;
-row-gap: 1rem !important;
-flex-direction: column !important;
-align-items: center !important;
-padding-bottom: 3rem;
 }
 
-.nuestroequipo p {font-size: 1.4rem !important;
+.navbar-toggler span {
+	filter: invert(100%);
 }
 
-.contacto {row-gap: 0.3rem !important;
-align-items: center !important;}
+.hamburgernav {
+	display: flex;
+	justify-content: center !important;
+}
+
+.banner__button {
+	font-size: 1.8rem;
+}
+
+.footer ul a {
+	font-size: 1.4rem !important;
+	color: white;
+}
+
+.footer ul {
+	background-color: rgb(14, 14, 14);
+}
+
+/* media queries */
+@media screen and (max-width: 767px) {
 
 
-	  }
+	.headertitulos {
+		font-size: 1.4rem;
+	}
 
-	
+	.footer {
+		font-size: 1.4rem;
+		row-gap: 1rem !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		padding-bottom: 3rem;
+	}
+
+	.nuestroequipo p {
+		font-size: 1.4rem !important;
+	}
+
+	.contacto {
+		row-gap: 0.3rem !important;
+		align-items: center !important;
+	}
+
+}

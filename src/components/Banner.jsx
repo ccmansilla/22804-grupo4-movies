@@ -67,15 +67,6 @@ const Banner = () => {
 							/>
 						)}
 					</h1>
-
-					<div className="banner__buttons">
-						<button className="banner__button">
-							<i className="fa-solid fa-play"></i>Ver Trailer
-						</button>
-						<button className="banner__button">
-							<i className="fa-solid fa-film"></i>Mi Lista
-						</button>
-					</div>
 					<h3 className="banner__description">
 						{" "}
 						{truncate(movie?.overview, 200)}

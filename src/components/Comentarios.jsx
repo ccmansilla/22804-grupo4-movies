@@ -115,7 +115,7 @@ function Comentarios({ usuario = '', pelicula = '' }) {
                         <label for="comentario" className="form-label">Comentario</label>
                         <textarea className="form-control bg-dark text-white" id="comentario" name="comentario" rows="3" value={comentario} onChange={(e) => setComentario(e.target.value)} required></textarea>
                     </div>
-                    <button type="submit" className="banner__button"><i class="fa-sharp fa-solid fa-plus"></i>Agregar</button>
+                    <button type="submit" className="comment__button"><i class="fa-sharp fa-solid fa-plus"></i>Agregar</button>
                 </form>
             </div>
 
@@ -126,7 +126,7 @@ function Comentarios({ usuario = '', pelicula = '' }) {
                     <div className="card-header bgCardHeader p-2">
                         <div className='d-flex justify-content-end'>
                             {(item.Usuario !== usuario)? ('') :
-                                (<div> <button onClick={() => { confirmDelete(item.id) }} className="banner__button ms-2"><i className="fa-solid fa-trash "></i></button> </div>)
+                                (<div> <button onClick={() => { confirmDelete(item.id) }} className="comment__button ms-2"><i className="fa-solid fa-trash "></i>Borrar</button> </div>)
                             }
                         </div>
                         <h4 className="card-title">{item.Usuario}</h4>

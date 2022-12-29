@@ -19,13 +19,21 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !subject || !message) {
-      Swal.fire("Dont leave empty fields!");
+      Swal.fire({
+        html : "<h3>No dejes los campos vacios!</h3>",
+        color: '#fff',
+        background: 'rgba(51, 51, 51)',
+      });
     } else {
       await addDoc(collection(db, "form"), {
         ...formData,        
       })
       setFormData({name: "", email: "", subject:"", message:""});
-      Swal.fire("Form sent!")
+      Swal.fire({
+        html: "<h3>Mensaje enviado!</h3>",
+        color: '#fff',
+        background: 'rgba(51, 51, 51)',
+      })
     }
   };
 
