@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { app } from "../fb";
 
 const Logout = () => {
@@ -8,7 +9,7 @@ const Logout = () => {
     };
 
     return (
-        <button className="banner__button" onClick={cerrarSesion}><i className="fa-solid fa-power-off"></i>Salir</button>
+        <Link to='/' className="banner__button" onClick={cerrarSesion}><i className="fa-solid fa-power-off"></i>Salir</Link>
     )
 };
 
