@@ -31,8 +31,9 @@ function Comentarios({ usuario = '', pelicula = '' }) {
             title: 'Comentario Agregado',
             icon: 'success',
             confirmButtonText: 'Listo',
-            color: '#fff',
-            background: 'rgba(51, 51, 51)',
+            confirmButtonColor: '#FFA500',
+            color: '#FFA500',
+            background: '#212529',
             showClass: {
                 popup: 'animate__animated animate__fadeInDown'
             },
@@ -66,11 +67,11 @@ function Comentarios({ usuario = '', pelicula = '' }) {
         Swal.fire({
             title: 'Seguro de Borrar el Comentario?',
             icon: 'question',
-            color: '#fff',
-            background: 'rgba(51, 51, 51)',
+            color: '#FFA500',
+            background: '#212529',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#FFA500',
+            cancelButtonColor: '#FFA500',
             confirmButtonText: 'Si, Borrar!',
             cancelButtonText: 'Cancelar',
             showClass: {
@@ -85,9 +86,10 @@ function Comentarios({ usuario = '', pelicula = '' }) {
                 Swal.fire({
                     title: 'Comentario Borrado',
                     icon: 'success',
-                    color: '#fff',
-                    background: 'rgba(51, 51, 51)',
+                    color: '#FFA500',
+                    background: '#212529',
                     confirmButtonText: 'Listo',
+                    confirmButtonColor: '#FFA500',
                     showClass: {
                         popup: 'animate__animated animate__fadeInDown'
                     },
@@ -107,30 +109,35 @@ function Comentarios({ usuario = '', pelicula = '' }) {
 
     //mostrar datos en estructura    
     return (
-        <div className="cometarios m-3">
-            <h3 className="title2 p-2">Deja tu Comentario</h3>
-            <div className="card bgComment text-white p-2 m-2">
-                <form onSubmit={agregarComentario} className=''>
+        <div className="comentarios m-3">
+            <h3 className="title2 p-2 title">Deja tu Comentario</h3>
+            <div className="card bgComment text-dark p-2 m-2">
+                <form onSubmit={agregarComentario}>
                     <div className="mb-3">
-                        <label for="comentario" className="form-label">Comentario</label>
+                        <label for="comentario" className="form-label text-white fs-5">Comentario</label>
                         <textarea className="form-control bg-dark text-white" id="comentario" name="comentario" rows="3" value={comentario} onChange={(e) => setComentario(e.target.value)} required></textarea>
                     </div>
                     <button type="submit" className="comment__button"><i class="fa-sharp fa-solid fa-plus"></i>Agregar</button>
                 </form>
             </div>
 
-            <h3 className="title2 p-2">Comentarios Anteriores</h3>
+            <h3 className="title2 title p-2">Comentarios Anteriores</h3>
 
             {comentarios.map((item) => (
                 <div key={item.id} className='card bg-dark text-white m-2'>
-                    <div className="card-header bgCardHeader p-2">
+                    <div className="d-flex justify-content-between card-header bgCardHeader p-2">
+                        <div>
+                            <h4 className="card-title">{item.Usuario}</h4>
+                            <h6 className="card-subtitle mb-2 fs-6 fw-light">{item.Fecha}</h6>
+                        </div>
                         <div className='d-flex justify-content-end'>
                             {(item.Usuario !== usuario)? ('') :
-                                (<div> <button onClick={() => { confirmDelete(item.id) }} className="comment__button ms-2"><i className="fa-solid fa-trash "></i>Borrar</button> </div>)
+                                (<div> 
+                                    <button onClick={() => {}} className="comment__button ms-2"><i class="fa-solid fa-pencil"></i></button> 
+                                    <button onClick={() => { confirmDelete(item.id) }} className="comment__button ms-2"><i className="fa-solid fa-trash "></i></button> 
+                                </div>)
                             }
                         </div>
-                        <h4 className="card-title">{item.Usuario}</h4>
-                        <h6 className="card-subtitle mb-2 fs-6 fw-light">{item.Fecha}</h6>
                     </div>
                     <div className="card-body p-2">
                         <p className="card-text">

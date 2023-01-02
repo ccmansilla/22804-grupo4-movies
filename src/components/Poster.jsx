@@ -34,27 +34,27 @@ function Poster() {
   }
 
   return (
-    <div className="contenedor">      
-			<Header />
+    <div className="contenedor">
+      <Header />
       <div className="marco">
-      <div className="tile row" id='poster'>
-        {movies.map((movie) => (
+        <div className="tile row" id='poster'>
+          {movies.map((movie) => (
             <img
               key={movie.poster_path}
-              className="picture" 
+              className="picture"
               src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
               alt={movie.title}
             />
-        ))}
-        <div className='texto p-5'>
-          <h1 className="text-center"><i className="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
+          ))}
+          <div className='texto p-5'>
+            <h1 className="text-center"><i className="fa-sharp fa-solid fa-film"></i> ReactFliX</h1>
+          </div>
         </div>
-      </div>
       </div>
       <div className="m-5">
         <button onClick={Descargar} type="button" className='poster__button ms-5'><i className="fa-sharp fa-solid fa-download"></i> Descargar</button>
       </div>
-			<Footer />
+      <Footer />
     </div>
   );
 }

@@ -21,8 +21,10 @@ const Form = () => {
     if (!name || !email || !subject || !message) {
       Swal.fire({
         html : "<h3>No dejes los campos vacios!</h3>",
-        color: '#fff',
-        background: 'rgba(51, 51, 51)',
+        confirmButtonText: 'Listo',
+        confirmButtonColor: '#FFA500',
+        color: '#FFA500',
+        background: '#212529'
       });
     } else {
       await addDoc(collection(db, "form"), {
@@ -31,8 +33,11 @@ const Form = () => {
       setFormData({name: "", email: "", subject:"", message:""});
       Swal.fire({
         html: "<h3>Mensaje enviado!</h3>",
-        color: '#fff',
-        background: 'rgba(51, 51, 51)',
+        icon: 'success',
+        confirmButtonText: 'Listo',
+        confirmButtonColor: '#FFA500',
+        color: '#FFA500',
+        background: '#212529'
       })
     }
   };
@@ -49,7 +54,7 @@ const Form = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-10">
-            <div className="wrapper">
+            <div className="wrapper card bg-dark pt-4 pb-4">
               <div className="row no-gutters">
                 <div className="col-md-6">
                   <div className="contact-wrap w-100 p-lg-5 p-4">

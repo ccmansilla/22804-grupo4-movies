@@ -10,39 +10,7 @@
   }
   
   .contact-wrap {
-    background: rgba(127, 39, 156, 1);
-    background: -moz-linear-gradient(
-      -45deg,
-      rgba(127, 39, 156, 1) 0%,
-      rgba(46, 39, 157, 1) 100%
-    );
-    background: -webkit-gradient(
-      left top,
-      right bottom,
-      color-stop(0%, rgba(127, 39, 156, 1)),
-      color-stop(100%, rgba(46, 39, 157, 1))
-    );
-    background: -webkit-linear-gradient(
-      -45deg,
-      rgba(127, 39, 156, 1) 0%,
-      rgba(46, 39, 157, 1) 100%
-    );
-    background: -o-linear-gradient(
-      -45deg,
-      rgba(127, 39, 156, 1) 0%,
-      rgba(46, 39, 157, 1) 100%
-    );
-    background: -ms-linear-gradient(
-      -45deg,
-      rgba(127, 39, 156, 1) 0%,
-      rgba(46, 39, 157, 1) 100%
-    );
-    background: linear-gradient(
-      135deg,
-      rgba(127, 39, 156, 1) 0%,
-      rgba(46, 39, 157, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f279c', endColorstr='#2e279d', GradientType=1 );
+    background: #004FB3;
     h3 {
       color: #fff;
     }
@@ -90,7 +58,7 @@
   .contactForm {
     .form-control {
       border: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid #212529;
       padding: 0;
     }
   }
@@ -100,8 +68,8 @@
     cursor: pointer;
     border-width: 1px;
     border-radius: 5px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
     -webkit-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 10px 20px -6px rgba(0, 0, 0, 0.12);
@@ -110,14 +78,18 @@
   }
   
   .btn-primary {
-    background: #d62196 !important;
-    border-color: #d62196 !important;
+    background: #FFA500 !important;
+    border-color: #B37400 !important;
     color: #fff;
+    &:hover {
+      color: #212529;
+      transition: all 0.2s;
+    }
   }
   
   .info-wrap {
     h3 {
-      color: rgb(228, 138, 226);
+      color: #FFA500;
       position: relative;
       &:after {
         position: absolute;
@@ -125,7 +97,7 @@
         left: 0;
         width: 60px;
         height: 3px;
-        background: #d62196;
+        background: #FFA500;
         content: "";
       }
     }
@@ -143,7 +115,7 @@
           color: rgb(255, 255, 255);
         }
         a {
-          color: rgba(202, 72, 241, 0.885);
+          color: #0070FF;
         }
       }
       .icon {
@@ -166,7 +138,7 @@
 
   a {
     transition: 0.3s all ease;
-    color: #d62196;
+    color: #0070FF;
     text-decoration: none;
     &:hover,
     &:focus {

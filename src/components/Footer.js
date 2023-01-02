@@ -8,7 +8,7 @@ function Footer() {
 
       <Link to="/poster" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}> <p>Wallpaper</p></Link>
 
-      <div className='contacto'> <p>Contacto</p>
+      <div className='contacto'> <p className='links'>Contacto</p>
         <a href="https://github.com/ccmansilla/22804-grupo4-movies" target="_blank" className="links" style={{ color: 'inherit', textDecoration: 'inherit' }}>
           <div>
             <i className="fa-brands fa-github fonticon " ></i> <p>Github</p>
@@ -17,7 +17,7 @@ function Footer() {
       </div>
 
       
-        <button className="btn btn-secondary btn-lg dropdown-toggle nuestroequipo" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <button className="btn links btn-lg dropdown-toggle nuestroequipo" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <p>Nuestro equipo</p>
         </button>
 

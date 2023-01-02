@@ -31,14 +31,15 @@ const Row = ({ title, fetchURL }) => {
 			imageUrl: `${base_url}/${movie.poster_path}`,
 			imageHeight: 300,
 			imageAlt: 'Poster',
-			title: `<h2>${name} (${year})</h2>`,			
+			title: `<h2 class='title__detail'>${name} (${year})</h2>`,			
 			html: `<div>
-					<h3 class='text-start'>${description}</h3>
-					<p class='text-start'>${movie.overview}</p>
+					<h3 class='title__description'>${description}</h3>
+					<p class='text__description'>${movie.overview}</p>
 				   </div>`,
-			confirmButtonText: 'Cerrar',
-			color: '#fff',
-			background: 'rgba(51, 51, 51)',
+			confirmButtonText: 'Cerrar',			
+			confirmButtonColor: '#FFAF19',
+			color: '#FFF',
+			background: '#212529',
 			showClass: {
 				popup: 'animate__animated animate__fadeInDown'
 			},
@@ -49,8 +50,8 @@ const Row = ({ title, fetchURL }) => {
 	};
 
 	return (
-		<div className="row">
-			<h2>{title}</h2>
+		<div className="row pt-4">
+			<h2 className="title">{title}</h2>
 
 			<div className="posters">
 				{movies.map((movie) => (

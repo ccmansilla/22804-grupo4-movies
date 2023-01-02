@@ -1,15 +1,15 @@
-.comentarios {
-    color: #8da0bc;
-    background-color: #080f28;
+.card {
+    border: 1px solid #B37400;
 }
 
 .title2 {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .bgCardHeader, .bgComment {
-    background: #2d3760;
+    background: #004FB3;
+    color: #FFF;
 }
 
 .comment__button {
@@ -20,7 +20,7 @@
     padding-bottom: 0.5rem;
     padding-right: 2rem;
     cursor: pointer;
-    color: #fff;
+    color: white;
     outline: none;
     border: none;
     font-weight: 700;
@@ -31,13 +31,11 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-right: 1rem;
-    /* background-color: #2D3760; */
-    background-color: #007aff;
+    background-color: #FFAF19;
     opacity: 0.9;
 }
 
 .comment__button:hover {
-    color: #000;
-    background-color: #e6e6e6;
+    color: #212529;
     transition: all 0.2s;
 }

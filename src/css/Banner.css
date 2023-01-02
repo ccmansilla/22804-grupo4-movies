@@ -6,6 +6,7 @@
     width: 100%;
     position: relative;
 	background-position: top center;
+	border-bottom: 1px solid #B37400;
 }
 
 .banner__contents {
@@ -40,31 +41,6 @@
 	margin-right: 0.5rem;
 }
 
-.banner__button {
-	text-decoration: none;
-	cursor: pointer;
-	color: #fff;
-	outline: none;
-	border: none;
-	font-weight: 700;
-	border-radius: 0.2vw;
-	padding:0.5rem 1.5rem;
-	/* padding-left: 2rem;
-	padding-right: 2rem; */
-	margin-right: 1rem;
-	/* padding-top: 0.5rem; */
-	background-color: #2D3760;
-	opacity: 0.9;
-	/* padding-bottom: 0.5rem; */
-}
-
-.banner__button:hover {
-	color: #000;
-	background-color: #e6e6e6;
-	transition: all 0.2s;
-}
-
-
 
 .color-overlay{
     position: absolute;
@@ -73,7 +49,7 @@
     background-image: linear-gradient(
 		180deg,
 		transparent,
-		rgba(37, 37, 37, 0.21),
-		#080F28 
+		#00466651,
+		#004666b8
 	);
 }

@@ -9,7 +9,7 @@ const Logout = () => {
     };
 
     return (
-        <Link to='/' className="banner__button" onClick={cerrarSesion}><i className="fa-solid fa-power-off"></i>Salir</Link>
+        <Link to='/' className="links" onClick={cerrarSesion}><i className="fa-solid fa-power-off"></i>Salir</Link>
     )
 };
 

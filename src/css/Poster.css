@@ -11,14 +11,15 @@
 
 .marco {
     width: 80%;
-    margin-top: 30px;
+    margin-top: 120px;
     margin-left: 10%;
     height: 70vh;
     overflow: scroll;
+    background-color: #212529;
 }
 
 .tile {
-    background-color: #100a1f;
+    background-color: #212529;
     width: 1600px;
     height: 900px;
 }
@@ -40,9 +41,7 @@
     font-family: 'Zen Dots', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 60px;
     font-weight: bolder;
-    color: rgb(227, 22, 22);
-    text-shadow: 2px 0 #FFF, -2px 0 #FFF, 0 2px #FFF, 0 -2px #FFF,
-        1px 1px #FFF, -1px -1px #FFF, 1px -1px #FFF, -1px 1px #FFF;
+    color: #FFA500;
 }
 
 
@@ -65,12 +64,11 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-right: 1rem;    
-    background-color: #007aff;
+    background-color: #FFAF19;
     opacity: 0.9;
 }
 
 .poster__button:hover {
-    color: #000;
-    background-color: #e6e6e6;
+    color: #212529;
     transition: all 0.2s;
 }
